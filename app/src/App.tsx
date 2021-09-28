@@ -8,7 +8,7 @@ const topPage = await getSkillPage('overall');
 const App: React.FunctionComponent = () => {
   return(
     <div>
-      {stats}
+      {topPage}
     </div>
   );
 };
