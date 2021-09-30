@@ -16,7 +16,7 @@ const Top: React.FunctionComponent = () => {
 }
 
 function PlayerView():JSX.Element{
-  const [data, setData] = useState<Player>('')
+  const [data, setData] = useState<Player>()
 
   useEffect( () => {
     (async () => {
