@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import hiscores, {getSkillPage} from 'osrs-json-hiscores';
+import hiscores, {getSkillPage, Player} from 'osrs-json-hiscores';
 
 
-const stats = hiscores.getStats('str rules105');
-const skillPage = getSkillPage('overall');
-
-//const topPage = await getSkillPage('overall');
+//const stats = hiscores.getStats('str rules105');
+//const skillPage = getSkillPage('overall');
 
 const Top: React.FunctionComponent = () => {
   return(
     <div>
       <h1>TrustFlip</h1>
       <h2><a href ="https://github.com/strrules105/TrustFlip">Github Repository</a></h2>
-      <div>
-        getStats;
-      </div>
+    </div>
+  )
+}
+
+function PlayerView():JSX.Element{
+  const [data, setData] = useState<Player>('')
+
+  useEffect( () => {
+    (async () => {
+      const stats  = await hiscores.getStats('str rules105');
+      setData(stats);
+    })
+  },[])
+  return(
+    <div>
+      {data === null ?
+        <span>Loading</span> :
+        <span>{data.name}</span>}
     </div>
   )
 }
@@ -23,7 +36,7 @@ const Top: React.FunctionComponent = () => {
 const Skills: React.FunctionComponent = () => {
   return(
     <React.Fragment>
-      {stats}
+      {PlayerView}
     </React.Fragment>
   )
 }
