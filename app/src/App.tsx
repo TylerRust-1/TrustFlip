@@ -3,7 +3,6 @@ import './App.css';
 import './index.css';
 //import hiscores, {getSkillPage, Player} from 'osrs-json-hiscores';
 import { Hiscores, News, Player } from 'oldschooljs';
-import { isWhiteSpaceLike } from 'typescript';
 import { AccountType } from 'oldschooljs/dist/meta/types';
 //import { AccountType } from 'oldschooljs/dist/meta/types';
 
@@ -65,7 +64,7 @@ const Top: React.FunctionComponent = () => {
 
 const App: React.FunctionComponent = () => {
   return(
-    <div>
+    <div style={styles.container}>
       <Top />
     </div>
   );
@@ -75,6 +74,7 @@ const styles = {
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    
     background: 'rgb(122, 121, 120)',
     width: "60%",
     color: 'black',    

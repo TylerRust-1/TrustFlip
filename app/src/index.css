@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("rock.jpg");
-  background: rgb(122, 121, 120)
+  align-items: center;
+  align-content: center;
 }
 
 code {
