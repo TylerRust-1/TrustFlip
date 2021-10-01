@@ -1,3 +1,11 @@
 {
+<<<<<<< HEAD
     "git.ignoreLimitWarning": true
+=======
+<<<<<<< HEAD
+    "git.ignoreLimitWarning": true
+=======
+    "makefile.extensionOutputFolder": "./.vscode"
+>>>>>>> dev
+>>>>>>> master
 }
