@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Middle } from './components/Middle';
 import { Top } from './components/Top';
 import './App.css';
@@ -61,14 +61,4 @@ const App: React.FunctionComponent = () => {
   );
 };
 
-const styles = {
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    
-    background: 'rgb(122, 121, 120)',
-    width: "60%",
-    color: 'black',    
-  } 
-}
 export default App;

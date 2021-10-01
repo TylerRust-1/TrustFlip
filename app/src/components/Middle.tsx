@@ -1,14 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Items } from 'oldschooljs';
-import { Worlds } from 'oldschooljs';
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
+const twistedBow = Items.get(20997);
 
 export const Middle: React.FunctionComponent = () => {
-    const WorldOne = Worlds.get(301);
     return(
-      <div>
-        {WorldOne}
-      </div>
+      <div style = {styles.container}>
+        <Container>
+          <Row>
+            <Col>{twistedBow?.buy_limit}</Col>
+            <Col>{twistedBow?.buy_limit}</Col>
+            <Col>{twistedBow?.buy_limit}</Col>
+          </Row>
+        </Container>
+        </div>
       )
   }
+
+  const styles = {
+    container: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      
+      background: 'rgb(122, 121, 120)',
+      width: "60%",
+      color: 'black',    
+    }
+  } 
